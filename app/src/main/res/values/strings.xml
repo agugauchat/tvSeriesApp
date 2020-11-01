@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">TVShowReminder</string>
+    <string name="app_name">TV Show Reminder</string>
+    <string name="detail">Detalle</string>
+    <string name="all_movies">TODAS</string>
 </resources>
