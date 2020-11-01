@@ -4,7 +4,9 @@
     <color name="colorPrimaryDark">#1b1b1b</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="recycler_background">#1b1b1b</color>
-    <color name="card_gradient_start">#091920</color>
-    <color name="card_gradient_end">#3c5663</color>
+    <color name="card_gradient_start">#63091920</color>
+    <color name="card_gradient_end">#633c5663</color>
     <color name="title_color">#e1f5ff</color>
+    <color name="white">#ffffff</color>
+    <color name="genreCardColor">#CC1e2b31</color>
 </resources>
