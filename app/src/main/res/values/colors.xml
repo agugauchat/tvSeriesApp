@@ -9,4 +9,6 @@
     <color name="title_color">#e1f5ff</color>
     <color name="white_title">#8FFFFFFF</color>
     <color name="genreCardColor">#CC1e2b31</color>
+    <color name="white">#ffffff</color>
+    <color name="gray_title">#1b1b1b</color>
 </resources>
