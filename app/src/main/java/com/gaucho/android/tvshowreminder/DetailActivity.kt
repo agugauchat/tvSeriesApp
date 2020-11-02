@@ -21,9 +21,15 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        overridePendingTransition(R.anim.slide_in, R.anim.nothing)
         setContentView(R.layout.activity_detail)
         val tvSerie = intent.getSerializableExtra(EXTRA_PARAMS) as TVSerie
         show(tvSerie)
+    }
+
+    override fun onBackPressed() {
+        finish()
+        overridePendingTransition(R.anim.nothing, R.anim.slide_out)
     }
 
     private fun show(serie: TVSerie) {
