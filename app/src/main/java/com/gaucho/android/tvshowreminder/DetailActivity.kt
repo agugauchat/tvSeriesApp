@@ -30,18 +30,33 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.hide()
         detail_name.setupTextView(serie.name)
         detail_overview.setupTextView(serie.overview)
+
+        setYear(serie.firstAirDate)
+        setupBackgroundImage(serie.backdropPath)
+        setupBackgroundTint(serie.posterPath)
+
+        Picasso.get().load("https://image.tmdb.org/t/p/w300${serie.posterPath}").into(detail_top_image)
+    }
+
+    private fun setYear(date: Date?) {
         var year : String? = null
-        serie.firstAirDate?.let { date ->
+        date?.let {
             val cal: Calendar = Calendar.getInstance()
-            cal.time = date
+            cal.time = it
             year = cal.get(Calendar.YEAR).toString()
         }
+
         detail_release_year.setupTextView(year)
-        Picasso.get().load("https://image.tmdb.org/t/p/w780${serie.backdropPath}").into(detail_background_image)
+    }
+
+    private fun setupBackgroundImage(backdropPath: String?) {
+        Picasso.get().load("https://image.tmdb.org/t/p/w780${backdropPath}").into(detail_background_image)
         detail_background_image.colorFilter = ColorMatrixColorFilter(ColorMatrix().apply { setSaturation(0f)})
         detail_background_image.alpha = 0.5F
+    }
 
-        Picasso.get().load("https://image.tmdb.org/t/p/w300${serie.posterPath}").into(object : com.squareup.picasso.Target {
+    private fun setupBackgroundTint(posterPath: String?) {
+        Picasso.get().load("https://image.tmdb.org/t/p/w300${posterPath}").into(object : com.squareup.picasso.Target {
             override fun onBitmapLoaded(bitmap: Bitmap?, from: LoadedFrom?) {
                 bitmap?.let {
                     val palette: Palette = Palette.from(bitmap).generate()
@@ -53,9 +68,7 @@ class DetailActivity : AppCompatActivity() {
 
             override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}
             override fun onBitmapFailed(e: Exception?, errorDrawable: Drawable?) {}
-            })
-
-        Picasso.get().load("https://image.tmdb.org/t/p/w300${serie.posterPath}").into(detail_top_image)
+        })
     }
 
     companion object {

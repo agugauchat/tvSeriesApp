@@ -23,66 +23,85 @@
         app:layout_constraintTop_toTopOf="parent"
         android:importantForAccessibility="no" />
 
-    <ImageView
-        android:id="@+id/detail_top_image"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/detail_top_image_card"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:importantForAccessibility="no"
+        android:layout_marginTop="25dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintCircleRadius="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/detail_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:padding="16dp"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_top_image"
-        tools:text="Title" />
+        <ImageView
+            android:id="@+id/detail_top_image"
+            android:layout_width="182dp"
+            android:layout_height="273dp"
+            android:importantForAccessibility="no" />
+    </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/detail_release_year"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:padding="16dp"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_name"
-        tools:text="2020" />
+        android:orientation="vertical"
+        android:paddingHorizontal="37dp"
+        app:layout_constraintTop_toBottomOf="@+id/detail_top_image_card">
 
-    <TextView
-        android:id="@+id/detail_title_overview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:padding="16dp"
-        android:textColor="@color/gray_title"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detail_release_year"
-        android:text="@string/overview" />
+        <TextView
+            android:id="@+id/detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:paddingTop="23dp"
+            android:paddingBottom="2dp"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Title" />
 
-    <TextView
-        android:id="@+id/detail_overview"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif"
-        android:padding="16dp"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detail_title_overview"
-        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry..." />
+        <TextView
+            android:id="@+id/detail_release_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detail_name"
+            tools:text="2020" />
+
+        <TextView
+            android:id="@+id/detail_title_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:textColor="@color/gray_title"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_release_year"
+            android:text="@string/overview" />
+
+        <TextView
+            android:id="@+id/detail_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:padding="16dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_title_overview"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry..." />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

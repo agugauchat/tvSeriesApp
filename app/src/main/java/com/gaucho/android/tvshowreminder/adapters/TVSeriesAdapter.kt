@@ -34,6 +34,14 @@ class TVSeriesAdapter(var context: Context, var series: ArrayList<TVSerie>) : Re
         Picasso.get().load("https://image.tmdb.org/t/p/w300${tvSerie.backdropPath}").into(holder.imageTVSerie)
         holder.imageTVSerie.colorFilter = ColorMatrixColorFilter(ColorMatrix().apply { setSaturation(0f)})
 
+        holder.genresTVSerie.setupTextView(getGenreToShow(tvSerie.genreIds).toUpperCase(Locale.ROOT))
+        holder.cardTVSerie.setOnClickListener {
+            DetailActivity.start(it.context, tvSerie)
+        }
+    }
+
+    private fun getGenreToShow(genreIds: List<Int>?) : String {
+
         val listOfGenres = genresList
         var genresTitle = ""
         if (!listOfGenres.isNullOrEmpty()) {
@@ -46,7 +54,7 @@ class TVSeriesAdapter(var context: Context, var series: ArrayList<TVSerie>) : Re
                     genresTitle += "{it.name} "
                 }
             }*/
-            tvSerie.genreIds?.let { item ->
+            genreIds?.let { item ->
                 genre = listOfGenres.first { it.id == item.firstOrNull()}
                 genre?.let {
                     genresTitle += it.name
@@ -54,11 +62,7 @@ class TVSeriesAdapter(var context: Context, var series: ArrayList<TVSerie>) : Re
             }
         }
 
-        holder.genresTVSerie.setupTextView(genresTitle.toUpperCase(Locale.ROOT))
-
-        holder.cardTVSerie.setOnClickListener {
-            DetailActivity.start(it.context, tvSerie)
-        }
+        return genresTitle
     }
 
     override fun getItemCount(): Int {
