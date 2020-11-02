@@ -1,6 +1,7 @@
 package com.gaucho.android.tvshowreminder
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -21,15 +22,18 @@ class MainActivity : AppCompatActivity() {
         var genresList: List<Genre>? = null
     }
 
+    private lateinit var rvHeadline: RecyclerView
+    private lateinit var titleList: TextView
     private var tvSeriesArrayList = ArrayList<TVSerie>()
     private var tvSeriesAdapter: TVSeriesAdapter? = null
-    private var rvHeadline: RecyclerView? = null
     private var tvSeriesViewModel: TVSeriesViewModel? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         rvHeadline = findViewById(R.id.rvTVSeries)
+        titleList = findViewById(R.id.list_title)
+        titleList.text = getString(R.string.all_movies)
         tvSeriesViewModel = ViewModelProviders.of(this).get(TVSeriesViewModel::class.java)
         tvSeriesViewModel!!.init()
         tvSeriesViewModel!!.getGenresRepository()?.observe(this, Observer { genresResponse: GenresResponse ->
