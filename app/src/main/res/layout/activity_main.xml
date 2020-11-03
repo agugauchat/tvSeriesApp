@@ -11,13 +11,13 @@
         android:id="@+id/list_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="12sp"
-        android:layout_marginTop="17dp"
         android:layout_marginStart="15dp"
-        android:textColor="@color/white_title"
+        android:layout_marginTop="17dp"
         android:text="@string/all_movies"
+        android:textColor="@color/white_title"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvTVSeries"
