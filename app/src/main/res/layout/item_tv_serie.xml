@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/card_item"
     android:layout_width="match_parent"
-    android:layout_height="156dp"
-    android:layout_marginStart="15dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginEnd="25dp"
-    app:cardCornerRadius="3dp">
+    android:layout_height="@dimen/item_h_size"
+    android:layout_marginStart="@dimen/item_ms_size"
+    android:layout_marginTop="@dimen/item_mt_size"
+    android:layout_marginEnd="@dimen/item_me_size"
+    app:cardCornerRadius="@dimen/item_cr_size">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -37,12 +37,12 @@
 
         <TextView
             android:id="@+id/item_name"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginStart="@dimen/item_name_ms_size"
+            android:layout_marginBottom="@dimen/item_name_mb_size"
             android:textColor="@color/title_color"
-            android:textSize="24sp"
+            android:textSize="@dimen/list_item_name_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -51,10 +51,10 @@
             android:id="@+id/genre_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="6dp"
+            android:layout_marginTop="@dimen/item_genre_card_mt_size"
+            android:layout_marginEnd="@dimen/item_genre_card_me_size"
             app:cardBackgroundColor="@color/genreCardColor"
-            app:cardCornerRadius="3dp"
+            app:cardCornerRadius="@dimen/item_genre_card_cr_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
@@ -62,12 +62,12 @@
                 android:id="@+id/item_genre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="4dp"
-                android:layout_marginEnd="14dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginStart="@dimen/item_genre_ms_size"
+                android:layout_marginTop="@dimen/item_genre_mt_size"
+                android:layout_marginEnd="@dimen/item_genre_me_size"
+                android:layout_marginBottom="@dimen/item_genre_mb_size"
                 android:textColor="@color/white_title"
-                android:textSize="12sp"
+                android:textSize="@dimen/list_item_genre_size"
                 android:textStyle="bold"
                 tools:text="ADVENTURE" />
 

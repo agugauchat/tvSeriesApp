@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="list_title_ms_size">15dp</dimen>
+    <dimen name="list_title_mt_size">17dp</dimen>
+    <dimen name="list_rv_pb_size">45dp</dimen>
+
+    <dimen name="detail_back_button_size">32dp</dimen>
+    <dimen name="detail_back_button_ms_size">13dp</dimen>
+    <dimen name="detail_back_button_mt_size">25dp</dimen>
+    <dimen name="detail_top_image_mt_size">25dp</dimen>
+    <dimen name="detail_top_image_elevation_size">10dp</dimen>
+    <dimen name="detail_top_image_cr_size">6dp</dimen>
+    <dimen name="detail_top_image_ccr_size">20dp</dimen>
+    <dimen name="detail_top_image_w_size">182dp</dimen>
+    <dimen name="detail_top_image_h_size">273dp</dimen>
+    <dimen name="detail_linear_ph_size">37dp</dimen>
+    <dimen name="detail_name_ph_size">16dp</dimen>
+    <dimen name="detail_name_pt_size">23dp</dimen>
+    <dimen name="detail_name_pb_size">2dp</dimen>
+    <dimen name="detail_tv_p_size">16dp</dimen>
+    <dimen name="detail_tv_pb_size">22dp</dimen>
+    <dimen name="detail_tv_pt_size">43dp</dimen>
+
+    <dimen name="item_h_size">156dp</dimen>
+    <dimen name="item_ms_size">15dp</dimen>
+    <dimen name="item_mt_size">20dp</dimen>
+    <dimen name="item_me_size">25dp</dimen>
+    <dimen name="item_cr_size">3dp</dimen>
+    <dimen name="item_name_ms_size">16dp</dimen>
+    <dimen name="item_name_mb_size">15dp</dimen>
+    <dimen name="item_genre_card_mt_size">8dp</dimen>
+    <dimen name="item_genre_card_me_size">6dp</dimen>
+    <dimen name="item_genre_card_cr_size">3dp</dimen>
+    <dimen name="item_genre_ms_size">15dp</dimen>
+    <dimen name="item_genre_mt_size">4dp</dimen>
+    <dimen name="item_genre_me_size">14dp</dimen>
+    <dimen name="item_genre_mb_size">5dp</dimen>
+
+    <dimen name="button_bg_pl_size">43dp</dimen>
+    <dimen name="button_bg_pr_size">41dp</dimen>
+    <dimen name="button_bg_pt_size">14dp</dimen>
+    <dimen name="button_bg_pb_size">13dp</dimen>
+    <dimen name="button_stoke_w_size">2dp</dimen>
+    <dimen name="button_cr_size">100dp</dimen>
+
+    <!-- Fonts -->
+    <dimen name="list_title_size">12sp</dimen>
+    <dimen name="list_item_name_size">24sp</dimen>
+    <dimen name="list_item_genre_size">12sp</dimen>
+
+    <dimen name="detail_titles_size">24sp</dimen>
+    <dimen name="detail_text_size">16sp</dimen>
+    <dimen name="detail_description_size">14sp</dimen>
+
+</resources>

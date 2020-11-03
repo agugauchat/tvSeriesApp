@@ -11,11 +11,11 @@
         android:id="@+id/list_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="17dp"
+        android:layout_marginStart="@dimen/list_title_ms_size"
+        android:layout_marginTop="@dimen/list_title_mt_size"
         android:text="@string/all_movies"
         android:textColor="@color/white_title"
-        android:textSize="12sp"
+        android:textSize="@dimen/list_title_size"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,7 +23,7 @@
         android:id="@+id/rvTVSeries"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="45dp"
+        android:paddingBottom="@dimen/list_rv_pb_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/list_title">
