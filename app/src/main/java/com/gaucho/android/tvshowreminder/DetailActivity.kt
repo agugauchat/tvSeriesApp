@@ -40,8 +40,40 @@ class DetailActivity : AppCompatActivity() {
         setYear(serie.firstAirDate)
         setupBackgroundImage(serie.backdropPath)
         setupBackgroundTint(serie.posterPath)
+        setupSubscriptionButton(serie.name, serie.id)
 
         Picasso.get().load("https://image.tmdb.org/t/p/w300${serie.posterPath}").into(detail_top_image)
+    }
+
+    private fun setupSubscriptionButton(name: String?, id: Int?) {
+        val sharedPreference =  getSharedPreferences("TV_SERIES", Context.MODE_PRIVATE)
+        var searchResult = sharedPreference.getInt(name, -1)
+        if (searchResult == -1) setupSubscribeButton() else setupSubscribedButton()
+
+        subscribe_button.setOnClickListener {
+            val editor = sharedPreference.edit()
+            if (searchResult == -1) {
+                searchResult = id!!
+                editor.putInt(name, id)
+                setupSubscribedButton()
+            }
+            else {
+                searchResult = -1
+                editor.remove(name)
+                setupSubscribeButton()
+            }
+            editor.commit()
+        }
+    }
+
+    private fun setupSubscribeButton() {
+        subscribe_button.setupTextView(getString(R.string.subscribe))
+        subscribe_button.setBackgroundResource(R.drawable.button_background);
+    }
+
+    private fun setupSubscribedButton() {
+        subscribe_button.setupTextView(getString(R.string.subscribed))
+        subscribe_button.setBackgroundResource(R.drawable.disabled_button_background);
     }
 
     private fun setYear(date: Date?) {
