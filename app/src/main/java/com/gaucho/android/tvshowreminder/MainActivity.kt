@@ -50,10 +50,10 @@ class MainActivity : AppCompatActivity() {
     private fun setupRecyclerView() {
         if (tvSeriesAdapter == null) {
             tvSeriesAdapter = TVSeriesAdapter(this@MainActivity, tvSeriesArrayList)
-            rvHeadline!!.layoutManager = LinearLayoutManager(this)
-            rvHeadline!!.adapter = tvSeriesAdapter
-            rvHeadline!!.itemAnimator = DefaultItemAnimator()
-            rvHeadline!!.isNestedScrollingEnabled = true
+            rvHeadline.layoutManager = LinearLayoutManager(this)
+            rvHeadline.adapter = tvSeriesAdapter
+            rvHeadline.itemAnimator = DefaultItemAnimator()
+            rvHeadline.isNestedScrollingEnabled = true
         } else {
             tvSeriesAdapter!!.notifyDataSetChanged()
         }

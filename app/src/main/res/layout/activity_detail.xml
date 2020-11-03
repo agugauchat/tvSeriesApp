@@ -23,6 +23,18 @@
         app:layout_constraintTop_toTopOf="parent"
         android:importantForAccessibility="no" />
 
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/back_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/back" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

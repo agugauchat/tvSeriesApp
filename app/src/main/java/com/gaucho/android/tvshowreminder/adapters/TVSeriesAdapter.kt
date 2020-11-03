@@ -41,7 +41,6 @@ class TVSeriesAdapter(var context: Context, var series: ArrayList<TVSerie>) : Re
     }
 
     private fun getGenreToShow(genreIds: List<Int>?) : String {
-
         val listOfGenres = genresList
         var genresTitle = ""
         if (!listOfGenres.isNullOrEmpty()) {

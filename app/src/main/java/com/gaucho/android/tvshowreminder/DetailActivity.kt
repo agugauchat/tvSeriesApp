@@ -34,6 +34,10 @@ class DetailActivity : AppCompatActivity() {
 
     private fun show(serie: TVSerie) {
         supportActionBar?.hide()
+        back_button.setOnClickListener {
+            onBackPressed()
+        }
+        back_button.bringToFront()
         detail_name.setupTextView(serie.name)
         detail_overview.setupTextView(serie.overview)
 
@@ -68,12 +72,12 @@ class DetailActivity : AppCompatActivity() {
 
     private fun setupSubscribeButton() {
         subscribe_button.setupTextView(getString(R.string.subscribe))
-        subscribe_button.setBackgroundResource(R.drawable.button_background);
+        subscribe_button.setBackgroundResource(R.drawable.button_background)
     }
 
     private fun setupSubscribedButton() {
         subscribe_button.setupTextView(getString(R.string.subscribed))
-        subscribe_button.setBackgroundResource(R.drawable.disabled_button_background);
+        subscribe_button.setBackgroundResource(R.drawable.disabled_button_background)
     }
 
     private fun setYear(date: Date?) {
@@ -101,7 +105,7 @@ class DetailActivity : AppCompatActivity() {
                     val dominantColor = palette.getDominantColor(getColor(R.color.card_gradient_start))
                     background_transparency.setBackgroundColor(dominantColor)
                     background_transparency.alpha = 0.7F
-                };
+                }
             }
 
             override fun onPrepareLoad(placeHolderDrawable: Drawable?) {}
